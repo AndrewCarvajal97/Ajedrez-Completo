@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    background-color: #fff;
+}
+
+#tablero{
+    display: grid;
+    grid-template-columns: repeat(8,60px);
+    grid-template-rows: repeat(8,60px);
+    border:  2px solid #333;   
+    box-sizing: border-box;
+}
+
+.casilla{
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.casilla.blancas{
+    background-color: #fff;
+}
+
+.casilla.negras{
+    background-color: #828282;
+}
+
+.ficha{
+    cursor: pointer;
+    font-size: 2.5rem;
+}
+
+.ficha.negra{
+    color: #000;
+}
+
+.ficha.blanca{
+    color: rgb(203, 203, 203);
+}
+
+.ficha.seleccionada{
+    transform: scale(1.3);
+}
