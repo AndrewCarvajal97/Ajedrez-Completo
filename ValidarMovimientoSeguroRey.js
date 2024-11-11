@@ -3,8 +3,8 @@ import { posicionValida } from "./validarPosicionValida.js";
 
 export const esCasillaSeguraParaRey = (fila, columna, esReyBlanco, matrix) => {
     // Verificar amenazas de peones
-    const direccionPeon = esReyBlanco ? 1 : -1;
-    const peonEnemigo = esReyBlanco ? '♟' : '♙';
+    const direccionPeon = esReyBlanco ? -1 : 1;
+    const peonEnemigo = esReyBlanco ? '♟' :'♙' ;
     
     // Verificar amenazas de peones en diagonales
     if (posicionValida(fila + direccionPeon, columna - 1) &&

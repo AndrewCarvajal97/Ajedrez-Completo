@@ -11,11 +11,6 @@ export const crearFicha=()=>{
     return ficha
 }
 
-
-
-
-
-
 // Función para mostrar los movimientos posibles en el tablero
 const mostrarMovimientosPosibles = (movimientos) => {
     limpiarMovimientosPosibles();

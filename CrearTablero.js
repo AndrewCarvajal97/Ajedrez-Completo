@@ -1,14 +1,9 @@
-import { matrix } from "./Matrix.js"
+
 import { crearFicha } from "./fichas.js"
 import { validarMovimientos } from "./validarMovimiento.js"
 import { limpiarMovimientosPosibles } from "./fichas.js"
 
-export const crearTablero = (tablero) => {
-    const turnoIndicator = document.createElement('div');
-    turnoIndicator.id = 'turno-indicator';
-    turnoIndicator.textContent = 'Turno: Blancas';
-    document.body.insertBefore(turnoIndicator, tablero);
-    
+export const crearTablero = (tablero,turnoIndicator,matrix) => {
     for(let fila = 0; fila < 8; fila++) {
         for (let columna = 0; columna < 8; columna++) {
             const casilla = document.createElement('div');
