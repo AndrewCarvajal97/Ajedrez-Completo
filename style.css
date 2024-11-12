@@ -39,9 +39,7 @@ body{
     color: #000;
 }
 
-.ficha.blanca{
-    color: rgb(203, 203, 203);
-}
+
 
 .ficha.seleccionada{
     transform: scale(1.3);

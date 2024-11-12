@@ -31,10 +31,9 @@ export const crearTablero = (tablero,turnoIndicator,matrix) => {
             }
             
             casilla.addEventListener('click', () => {
-                const fichaInterior = casilla.querySelector('.ficha');
                 const seleccionada = document.querySelector('.seleccionada');
                 let turnoActual = tablero.getAttribute('turno') === 'true';
-                
+
                 if (seleccionada) {
                     if (validarMovimientos(seleccionada, casilla, matrix)) {
                         seleccionada.classList.remove('seleccionada');

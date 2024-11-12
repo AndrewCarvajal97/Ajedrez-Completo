@@ -66,20 +66,3 @@ const seleccionarFicha = (ficha) => {
     return null;
 }
 
-// Modificar la función de click en casilla para limpiar los indicadores cuando se realiza un movimiento
-const clickCasilla = (casilla, tablero) => {
-    const fichaInterior = casilla.querySelector('.ficha');
-    const seleccionada = document.querySelector('.seleccionada');
-    let turnoActual = tablero.getAttribute('turno') === 'true';
-    
-    if (seleccionada) {
-        if (validarMovimientos(seleccionada, casilla, matrix)) {
-            seleccionada.classList.remove('seleccionada');
-            limpiarMovimientosPosibles();
-            turnoActual = !turnoActual;
-            tablero.setAttribute('turno', turnoActual);
-            document.querySelector('#turno-indicator').textContent = 
-                `Turno: ${turnoActual ? 'Blancas' : 'Negras'}`;
-        }
-    }
-}
